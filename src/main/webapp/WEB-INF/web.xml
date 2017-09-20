@@ -11,8 +11,24 @@
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
+    
+    
+    
+    	<servlet>
+		<description>
+		</description>
+		<display-name>RedirectPage</display-name>
+		<servlet-name>RedirectPage</servlet-name>
+		<servlet-class>com.cloudflare.urlshortener.manager.RedirectPage</servlet-class>
+	</servlet>
+	
+    
     <servlet-mapping>
         <servlet-name>Jersey Web Application</servlet-name>
         <url-pattern>/webapi/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RedirectPage</servlet-name>
+        <url-pattern>/shortly/*</url-pattern>
     </servlet-mapping>
 </web-app>

@@ -1,5 +1,11 @@
-package utility;
+package com.cloudflare.urlshortener.utility;
 
+/**
+ * Utility class that transforms LongUrl into a base62 integer that would be used
+ * as shortUrl.
+ * @author hemil
+ *
+ */
 public class URLTransformUtil {
 
 	public int shortenURL(String url){
@@ -16,7 +22,7 @@ public class URLTransformUtil {
 			if('0' <= url.charAt(i) && url.charAt(i) <= '9')
 					id = id * 62 + url.charAt(i) - '0' + 52;
 		}
-		return id;
+		return Math.abs(id);
 	}
 	
 }

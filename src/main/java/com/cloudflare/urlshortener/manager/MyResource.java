@@ -1,4 +1,4 @@
-package com.cloudflare.urlshortener;
+package com.cloudflare.urlshortener.manager;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
